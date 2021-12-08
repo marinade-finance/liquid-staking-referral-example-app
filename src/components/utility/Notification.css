@@ -1,0 +1,15 @@
+.notification {
+  display: inline-block;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.notification.success {
+  background-color: #4bb543;
+  color: #fff;
+}
+
+.notification.error {
+  background-color: #cc0000;
+  color: #fff;
+}
