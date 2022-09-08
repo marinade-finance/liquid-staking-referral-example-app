@@ -4,7 +4,7 @@
 
 This is a simple React app which showcases the usage of [Marinade TS SDK](https://github.com/marinade-finance/marinade-ts-sdk) to help you build your own applications based on [Marinade](https://marinade.finance)!
 
-This application can be tested [here](https://liquid-staking-referral-example-app.pages.dev)!
+This application can be tested [here](https://liquid-staking-referral-example-app.pages.dev) (devnet)!
 
 ## Installation and usage
 1) Clone the repo and install dependencies
