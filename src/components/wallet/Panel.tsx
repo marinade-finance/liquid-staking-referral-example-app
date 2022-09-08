@@ -1,10 +1,11 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletDisconnectButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import { useMarinade } from '../marinade/MarinadeProvider'
 import { Deposit } from './Deposit'
 import { DepositStakeAccount } from './DepositStakeAccount'
 import { LiquidUnstake } from './LiquidUnstake'
+import { LiquidateStakeAccount } from './LiquidateStakeAccount'
 
 interface PanelComponentProps {
   onError?: (_: Error) => void
@@ -24,6 +25,7 @@ export const Panel: FC<PanelComponentProps> = ({ onError, onTransaction }) => {
       <Deposit onTransaction={onTransaction} onError={onError} />
       <LiquidUnstake onTransaction={onTransaction} onError={onError} />
       <DepositStakeAccount onTransaction={onTransaction} onError={onError} />
+      <LiquidateStakeAccount onTransaction={onTransaction} onError={onError} />
     </>}
   </div>
 }
