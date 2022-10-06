@@ -14,10 +14,8 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "baseUrl": ".",
-    "plugins": [],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
     "lib": [
       "dom",
       "dom.iterable",

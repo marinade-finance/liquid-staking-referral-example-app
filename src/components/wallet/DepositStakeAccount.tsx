@@ -1,9 +1,8 @@
 import React, { FC, useState } from 'react'
 import { web3 } from '@marinade.finance/marinade-ts-sdk'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
-import { Button } from '@solana/wallet-adapter-react-ui/lib/Button'
 import { WalletError } from '@solana/wallet-adapter-base'
-import { Input } from '@mui/material'
+import { Button, Input } from '@mui/material'
 import { useMarinade } from '../marinade/MarinadeProvider'
 import { Loader } from '../utility/Loader'
 
