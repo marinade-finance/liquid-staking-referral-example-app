@@ -1,9 +1,8 @@
-import { FC, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { web3 } from '@marinade.finance/marinade-ts-sdk'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
-import { Button } from '@solana/wallet-adapter-react-ui/lib/Button'
 import { WalletError } from '@solana/wallet-adapter-base'
-import { Input } from '@mui/material'
+import { Button, Input } from '@mui/material'
 import { useMarinade } from '../marinade/MarinadeProvider'
 import { Loader } from '../utility/Loader'
 
@@ -28,11 +27,13 @@ export const LiquidateStakeAccount: FC<LiquidateStakeAccountComponentProps> = ({
     return <><Loader /></>
   }
 
-  return <div className='liquidate'>
-    <Input
-      onChange={(e) => setStakeAccount(e.target.value)}
-      placeholder='Stake account to liquidate'
-    />
+  return <div className='action-field'>
+    <div className='input-background'>
+      <Input
+        onChange={(e) => setStakeAccount(e.target.value)}
+        placeholder='Stake account to liquidate'
+      />
+    </div>
     <Button
       onClick={async () => {
         try {
