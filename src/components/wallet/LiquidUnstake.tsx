@@ -27,11 +27,13 @@ export const LiquidUnstake: FC<LiquidUnstakeComponentProps> = ({ onError, onTran
     return <><Loader /></>
   }
 
-  return <div>
-    <Input
-      onChange={(e) => setAmount(Number(e.target.value) || 0)}
-      placeholder='SOL amount to unstake'
-    />
+  return <div className='action-field'>
+    <div className='input-background'>
+      <Input
+        onChange={(e) => setAmount(Number(e.target.value) || 0)}
+        placeholder='SOL amount to unstake'
+      />
+    </div>
     <Button
       onClick={async () => {
         try {

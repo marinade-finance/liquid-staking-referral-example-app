@@ -27,11 +27,13 @@ export const LiquidateStakeAccount: FC<LiquidateStakeAccountComponentProps> = ({
     return <><Loader /></>
   }
 
-  return <div className='liquidate'>
-    <Input
-      onChange={(e) => setStakeAccount(e.target.value)}
-      placeholder='Stake account to liquidate'
-    />
+  return <div className='action-field'>
+    <div className='input-background'>
+      <Input
+        onChange={(e) => setStakeAccount(e.target.value)}
+        placeholder='Stake account to liquidate'
+      />
+    </div>
     <Button
       onClick={async () => {
         try {

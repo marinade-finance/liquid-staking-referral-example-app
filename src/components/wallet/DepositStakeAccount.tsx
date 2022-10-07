@@ -27,11 +27,13 @@ export const DepositStakeAccount: FC<DepositStakeAccountComponentProps> = ({ onE
     return <><Loader /></>
   }
 
-  return <div className='deposit'>
-    <Input
-      onChange={(e) => setStakeAccount(e.target.value)}
-      placeholder='Delegated stake account'
-    />
+  return <div className='action-field'>
+    <div className='input-background'>
+      <Input
+        onChange={(e) => setStakeAccount(e.target.value)}
+        placeholder='Delegated stake account'
+      />
+    </div>
     <Button
       onClick={async () => {
         try {

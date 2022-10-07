@@ -16,6 +16,8 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 
 const exploreTransactionLink = (network: string, tx: string) => `https://explorer.solana.com/tx/${tx}?cluster=${network}`
 
+require('@solana/wallet-adapter-react-ui/styles.css');
+
 export const Wallet: FC = () => {
   const network = WalletAdapterNetwork.Devnet
   const endpoint = useMemo(() => clusterApiUrl(network), [network])

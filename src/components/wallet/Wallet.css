@@ -32,3 +32,19 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.action-field > .input-background {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #740191;
+}
+
+.action-field > button {
+  background-color: #d028f8;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.action-field > button:hover {
+  background-color: #e17dfa;
+}

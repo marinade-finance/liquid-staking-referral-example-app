@@ -27,12 +27,15 @@ export const Deposit: FC<DepositComponentProps> = ({ onError, onTransaction }) =
     return <><Loader /></>
   }
 
-  return <div className='deposit'>
-    <Input
-      onChange={(e) => setAmount(Number(e.target.value) || 0)}
-      placeholder='SOL amount to stake'
-    />
+  return <div className='action-field'>
+    <div className='input-background'>
+      <Input
+        onChange={(e) => setAmount(Number(e.target.value) || 0)}
+        placeholder='SOL amount to stake'
+      />
+    </div>
     <Button
+      className='action-button'
       onClick={async () => {
         try {
           setProcessingTransaction(true)
